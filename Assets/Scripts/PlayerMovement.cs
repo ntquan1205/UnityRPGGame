@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 1f;
     public Rigidbody2D rb;
 
     void FixedUpdate() 
@@ -12,5 +12,4 @@ public class PlayerMovement : MonoBehaviour
 
         rb.linearVelocity = new Vector2(horizontal, vertical) * speed;
     }
-
 }
