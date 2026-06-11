@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 18484802}
   - component: {fileID: 18484801}
   - component: {fileID: 18484800}
+  - component: {fileID: 18484806}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Enemy
@@ -179,7 +180,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &18484802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -224,7 +225,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.69, y: 0.93}
+  m_Size: {x: 0.69000006, y: 0.93}
   m_EdgeRadius: 0
 --- !u!95 &18484803
 Animator:
@@ -322,6 +323,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &18484806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18484799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004b43b7fba35469383b8978a94aa5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Combat
+  damage: 1
 --- !u!1 &55605905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -8.371041e-11, y: -0.0000000020520718, z: -1.7177977e-19, w: 1}
   m_LocalPosition: {x: -3.2617, y: 0.1531, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1370,6 +1384,7 @@ GameObject:
   - component: {fileID: 674810998}
   - component: {fileID: 674810997}
   - component: {fileID: 674810996}
+  - component: {fileID: 674811000}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -1476,13 +1491,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674810995}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -8.371041e-11, y: -0.0000000020520718, z: -3.607339e-13, w: 1}
   m_LocalPosition: {x: -3.2617, y: 0.1531, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &674811000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674810995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineConfiner2D
+  BoundingShape2D: {fileID: 0}
+  Damping: 0.5
+  SlowingDistance: 5
+  OversizeWindow:
+    Enabled: 0
+    MaxWindowSize: 0
+    Padding: 0
+  m_LegacyMaxWindowSize: -2
 --- !u!1 &740685626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,6 +1532,7 @@ GameObject:
   - component: {fileID: 740685628}
   - component: {fileID: 740685627}
   - component: {fileID: 740685632}
+  - component: {fileID: 740685633}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1680,6 +1716,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &740685633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740685626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb6c82021dc947be9a4f2bb425644af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  currentHealth: 3
+  maxHealth: 3
 --- !u!1 &946958337
 GameObject:
   m_ObjectHideFlags: 0
