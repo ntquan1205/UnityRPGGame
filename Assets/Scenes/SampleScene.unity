@@ -1112,7 +1112,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -8.371041e-11, y: -0.0000000020520718, z: -1.7177977e-19, w: 1}
-  m_LocalPosition: {x: -3.2617, y: 0.1531, z: -10}
+  m_LocalPosition: {x: -3.2617, y: -0.93, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1430,7 +1430,7 @@ Transform:
   m_GameObject: {fileID: 674810995}
   serializedVersion: 2
   m_LocalRotation: {x: -8.371041e-11, y: -0.0000000020520718, z: -3.607339e-13, w: 1}
-  m_LocalPosition: {x: -3.2617, y: 0.1531, z: -10}
+  m_LocalPosition: {x: -3.2617, y: -0.93, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1626,7 +1626,7 @@ Transform:
   m_GameObject: {fileID: 740685626}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2617, y: 0.1531, z: 0}
+  m_LocalPosition: {x: -3.2617, y: -0.93, z: 0}
   m_LocalScale: {x: 1.9648454, y: 1.9972, z: 1.9972}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2240,7 +2240,7 @@ Transform:
   m_GameObject: {fileID: 1274031947}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.214186, y: -0.9040334, z: 0}
+  m_LocalPosition: {x: -0.8, y: -0.76, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2272,6 +2272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Movement
   speed: 2
+  attackRange: 0.8
 --- !u!58 &1274031954
 CircleCollider2D:
   m_ObjectHideFlags: 0
