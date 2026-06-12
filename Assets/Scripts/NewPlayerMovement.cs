@@ -6,7 +6,16 @@ public class NewPlayerMovement : MonoBehaviour
     public int facingDirection = 1;
     public Rigidbody2D rb;
     public Animator anim;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public Player_Combat player_Combat;
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Slash"))
+        {
+            player_Combat.Attack();
+        }
+    }
 
     void FixedUpdate()
     {

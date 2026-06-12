@@ -581,6 +581,7 @@ GameObject:
   - component: {fileID: 393388935}
   - component: {fileID: 393388940}
   - component: {fileID: 393388941}
+  - component: {fileID: 393388942}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -604,6 +605,7 @@ MonoBehaviour:
   facingDirection: 1
   rb: {fileID: 393388936}
   anim: {fileID: 393388940}
+  player_Combat: {fileID: 393388942}
 --- !u!50 &393388936
 Rigidbody2D:
   serializedVersion: 5
@@ -779,6 +781,19 @@ MonoBehaviour:
   currentHealth: 5
   maxHealth: 5
   healthText: {fileID: 1697182987}
+--- !u!114 &393388942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393388934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a67a78e808f54ada9d11fbe82cbc8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Combat
+  anim: {fileID: 393388940}
 --- !u!1 &458977974
 GameObject:
   m_ObjectHideFlags: 0
