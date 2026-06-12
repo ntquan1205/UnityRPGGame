@@ -741,7 +741,8 @@ Transform:
   m_LocalPosition: {x: -3.1414816, y: -0.81252503, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1203686992}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &393388940
@@ -778,8 +779,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb6c82021dc947be9a4f2bb425644af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  currentHealth: 5
-  maxHealth: 5
+  currentHealth: 20
+  maxHealth: 20
   healthText: {fileID: 1697182987}
 --- !u!114 &393388942
 MonoBehaviour:
@@ -793,7 +794,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a67a78e808f54ada9d11fbe82cbc8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Combat
+  attackPoint: {fileID: 1203686992}
+  weaponRange: 1
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  damage: 1
   anim: {fileID: 393388940}
+  cooldown: 2
 --- !u!1 &458977974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,6 +1740,37 @@ Transform:
   - {fileID: 467881158}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1203686991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203686992}
+  m_Layer: 6
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203686992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203686991}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.32, y: -0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 393388939}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1215775893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,7 +2155,8 @@ GameObject:
   - component: {fileID: 1274031953}
   - component: {fileID: 1274031954}
   - component: {fileID: 1274031955}
-  m_Layer: 0
+  - component: {fileID: 1274031956}
+  m_Layer: 6
   m_Name: Red_Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2359,6 +2399,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1274031956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274031947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c143997ed0a624a0bb2d4807affcff2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Health
+  currentHealth: 5
+  maxHealth: 5
 --- !u!1 &1459757578
 GameObject:
   m_ObjectHideFlags: 0
